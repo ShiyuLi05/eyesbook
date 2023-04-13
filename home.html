@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Shiyu Li">
+        <meta name="description" content="EyesBook">
+        <meta name="keywords" content="HTML, CSS, SEO, web, web development">
+        <title>eyesbook</title>
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;800&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!--CSS, Favicon, Script-->
+        <link rel="stylesheet" href="./src/style/home.css" media="all">
+        <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon">
+        <script src="./src/script/home.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <div class="container flexbox">
+                    <div class="title">EyesBook</div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Groups</a></li>
+                            <li><a href="#">My ads</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="profile">
+                        <img src="./src/img/self.jpg">
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <div class="container">
+                    <div class="columns">
+                        <section class="profile-info">
+                            <div class="profile-image">
+                                <img src="./src/img/self.jpg">
+                                <div><i class="fa-solid fa-pen-to-square"></i></div>
+                            </div>
+
+                            <div class="profession">
+                                <p>Shiyu Li</p>
+                                <P>Software Developer</P>
+                                <p><i class="fa-brands fa-github"> </i><a href="https://github.com/ShiyuLi05">Vist my GitHub</a></p>
+                            </div>
+                            <div class="divider"></div>
+
+                            <div class="analytics">
+                                <div class="connections">
+                                    <span>222</span>
+                                    <p>Connections</p>
+                                </div>
+
+                                <div class="divider"></div>
+
+                                <div class="followers">
+                                    <span>888</span>
+                                    <p>Followers</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+
+                            <div class="icons">
+                                <ul>
+                                    <li><div><i class="fa-solid fa-user-group"></i></div> Search for friends</li>
+                                    <li><div><i class="fa-solid fa-tv"></i></div> Watch</li>
+                                    <li><div><i class="fa-solid fa-clock-rotate-left"></i></div> That year today</li>
+                                    <li><div><i class="fa-solid fa-bookmark"></i></div> Favorites</li>
+                                    <li><div><i class="fa-solid fa-users-line"></i></div> Group</li>
+                                    <li><div><i class="fa-solid fa-calendar-days"></i></div> Activity</li>
+                                    <li><div><i class="fa-solid fa-star"></i></div> Special attention</li>
+                                    <li><div><i class="fa-solid fa-circle-chevron-down"></i></div> Unfold</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="posts">
+                            <section>
+                                <form>
+                                    <textarea placeholder="Shiyu Li, share your news."></textarea>
+                                    <div class="readfile">
+                                        <div style="display: flex;">
+                                            <label for="file-read" class="icon"><i class="fa-solid fa-image fa-lg" style="color: #bdbdbf;"></i></label>
+                                            <input type="file" id="file-read" accept="image/*">
+                                            <div class="message"></div>
+                                        </div>
+                                        <button type="button" class="post-btn">Post</button>
+                                    </div>
+                                </form>
+                                
+                                <div class="fb"></div>
+                            </section>
+
+                            <div class="fakeT">
+                                <div class='content-header'>
+                                    <div class="profile">
+                                        <img src="./src/img/self.jpg">
+                                    </div>
+                                    <h2>Shiyu Li</h2>
+                                    <p>Thu Apr 13 2023</p>
+                                </div>
+                                <div class="content">
+                                    <p>someone here? &#128075</p>
+                                    <img src="./src/img/giphy.gif">
+                                    <h4>16: 28 pm</h4>
+                                </div>
+                            </div>
+                            <div class="fakeT2">
+                                <div class='content-header'>
+                                    <div class="profile">
+                                        <img src="./src/img/self.jpg">
+                                    </div>
+                                    <h2>Shiyu Li</h2>
+                                    <p>Thu Apr 11 2023</p>
+                                </div>
+                                <div class="content">
+                                    <p>Hello world</p>
+                                    <h4>08: 11 am</h4>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="friends">
+                            <p>People you may know</p>
+
+                            <div class="other-users"></div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <div class="logout">
+                <a href=#><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+
+            <footer>
+                <div class="container footer">
+                    <div class="footerImg">
+                        <img src="./src/img/R.gif" alt="">
+                    </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href= #><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href= #><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href= #><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>   
+                        <p class="copyright">Designed by Shiyu Li &copy; 2023 &#128103</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

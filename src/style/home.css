@@ -1,1 +1,573 @@
 @import url(./reset.css);
+
+html {
+    scroll-behavior: smooth;
+    transition: all 0.25s ease-in-out;
+}
+
+body {
+    background-color: rgba(255, 248, 240, 0.5);
+    height: 100vh;
+    color: rgba(0, 0, 0, 0.8);;
+}
+
+.container {
+    width: min(100% - 15px, 1180px);
+    margin-inline: auto;
+}
+
+section {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.columns {
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* -------------------------------- */
+/* Header                           */
+/* -------------------------------- */
+
+header {
+    position: relative;
+    font-weight: bold;
+    width: 100%;
+    height: 66px;
+    overflow: hidden;
+    background-color:#669C65;
+    border: none;
+    padding: 8px 0px;
+}
+header a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #f0f2f4;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+header a:hover {
+    color: #2F4858;
+}
+.title {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    cursor: default;
+    width: 30%;
+    line-height: 58px;;
+}
+nav {
+    width: 70%;
+    text-align: center;
+    height: 58px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.flexbox {
+    display: flex;
+}
+nav ul li {
+    display: inline;
+    line-height: 56px;
+    cursor: default;
+}
+nav ul li + li {
+    margin-left: 30px;
+}
+.profile {
+    width: 50px;
+    height: 50px;
+    border: none;
+    text-align: right;
+    margin: 3px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+/* -------------------------------- */
+/* Profile Info                     */
+/* -------------------------------- */
+
+.profile-info {
+    position: relative;
+    width: 260px;
+    border: none;
+    padding: 15px 10px;
+    height: 580px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+.profile-image img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0px auto;
+}
+.profession {
+    height: 110px;
+    margin-top: 10px;
+    border: none;
+    text-align: center;
+}
+.profession p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.profession p + p, .analytics p {
+    color: rgb(73, 73, 73, 0.8);
+    font-size: 12px;
+    font-weight: 400;
+}
+.profession i {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    color: #2F4858;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+.profession i:hover {
+    color: #BCC292;
+}
+.profession a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #2F4858;
+}
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(71, 71, 71, 0.3);
+    margin-top: 0px;
+}
+.analytics {
+    border: none;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.analytics .divider {
+    height: 100%;
+    width: 2px;
+}
+.connections, .followers {
+    width: 105px;
+    height: 90px;
+    padding: 15px 10px;
+    text-align: center;
+    border: none;
+    background-color: #fff;
+}
+.analytics span {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1d28;
+}
+.analytics P {
+    line-height: 6px;
+}
+/* -------------------------------- */
+/* Icons design                     */
+/* -------------------------------- */
+.fa-pen-to-square {
+    position: absolute;
+    top:2%;
+    right: 5%;
+    color: rgb(0, 0, 0, 0.4);
+}
+.icons .fa-solid {
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    font-size: 18px;
+}
+.icons li {
+    font-weight: bolder;
+    font-size: 0.95rem;
+}
+.icons div {
+    display: inline-block;
+    margin: auto;
+    width: 38px;
+}
+.fa-user-group {
+    margin-top: 10px;
+    color: #1b86f5;
+}
+.fa-tv {
+    color: #3cc3c4;
+}
+.fa-clock-rotate-left {
+    color: #23adf9;
+}
+.fa-bookmark {
+    color: #a136c6;
+}
+.fa-users-line {
+    color: #1b86f5;
+}
+.fa-calendar-days {
+    color: #ea3352;
+}
+.fa-star {
+    color: #f6c038;
+}
+.fa-circle-chevron-down {
+    color: #e4e6eb;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------- */
+/*     Form                                             */
+/* ---------------------------------------------------- */
+.posts section {
+    margin-top: 0;
+}
+form {
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    padding-bottom: 0;
+    flex-direction: column;
+    display: grid;
+    width: 580px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+textarea {
+    background-color: #fff;
+    width: 100%;
+    height: 6rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color: #2F4858;
+    text-align: left;
+    resize: none;
+	caret-color: #2F4858;
+}
+.icon {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    line-height: 100%;
+    align-items: center;
+}
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+.message {
+    color: #bdbdbf;
+    height: 3rem;
+    line-height: 3rem;
+    margin-left: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+/* ---------------------------------------------------- */
+/*     Choose file and post button                      */
+/* ---------------------------------------------------- */
+
+input[type="file"] {
+    display: none;
+}
+.readfile {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+button{
+    padding: 0.6rem 1.4rem;
+    color: #fff;
+    font-size: 0.8rem;
+    background-color:#669C65;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: 500;
+}
+button:hover {
+    background-color: #2F4858;
+}
+
+/* ---------------------------------------------------- */
+/*    post                                              */
+/* ---------------------------------------------------- */
+
+.content-header {
+    display: flex;
+}
+.content-header img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 0.8rem;
+}
+.content-header h2 {
+    font-weight: 400;
+    line-height: 3rem;
+    margin-left: 0.2rem;
+}
+.content-header p {
+    display: inline;
+    margin: auto;
+    margin-right: 0.8rem;
+    color: #3b3d47;
+    font-weight: lighter;
+    font-size: small;
+    margin-top: 0;
+}
+.content {
+    width: 100%;
+    margin-top: 10px;
+}
+.content p {
+    margin-bottom: 0.5rem;
+}
+.content h4 {
+    margin-right: 0.8rem;
+    color: #3b3d47;
+    font-weight: lighter;
+    font-size: small;
+    margin-top: 0;
+    text-align: end;
+    margin-top: 0.5rem;
+}
+.post {
+    background-color:#fff;
+    width: 580px;
+    padding:1rem;
+    flex-direction: column;
+    display: grid;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+
+/* -------------------------------- */
+/* Post page                        */
+/* -------------------------------- */
+
+.posts {
+    width: 580px;
+    height: 100%;
+    border: none;
+    margin-inline: auto;
+}
+.fakeT, .fakeT2 {
+    margin-top: 15px;
+    border: none;
+    height: 520px;
+    padding: 15px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+.fakeT2 {
+    height: 150px;
+}
+
+/* -------------------------------- */
+/* Friends                          */
+/* -------------------------------- */
+.friends {
+    width: 300px;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-inline: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+}
+.friends p {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--app-dark-blue);
+}
+.other-users {
+    margin-top: 20px;
+    border: none;
+}
+.user {
+    width: 100%;
+    height: 80px;
+    margin-top: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+.image {
+    width: 55px;
+    height: 55px;
+    border: none;
+    text-align: right;
+    border-radius: 50%;
+}
+.user img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+.userinfo {
+    border: none;
+    width: 180px;
+    height: 55px;
+    padding: 4px 10px;
+}
+.user:hover {
+    background-color: rgba(243, 241, 241, 0.8);
+}
+.userinfo p {
+    text-align: left;
+    color: var(--app-dark-blue);
+    font-size: 16px;
+    font-weight: 500;
+}
+.userinfo P + P {
+    color: rgb(73, 73, 73, 0.8);
+    font-size: 14px;
+}
+
+/* -------------------------------- */
+/*            logout                */
+/* -------------------------------- */
+
+.logout {
+    width: 150px;
+    height: 46px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    position: fixed;
+    top: 8.5%;
+    right: 10%;
+    visibility: hidden;
+    opacity: 0; 
+}
+.logout.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+.logout i {
+    padding: 6px 7px;
+    border: none;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    color: #82A788;
+}
+.logout a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #82A788;
+}
+.logout a:hover {
+    color: #3A6870;
+}
+
+/* -------------------------------- */
+/*           Footer                 */
+/* -------------------------------- */
+
+footer {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    border: none;
+    margin-top: 60px;
+    padding: 10px;
+    background-color: #1a1d28;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+.footerImg {
+    width: 100px;
+    height: 100px;
+    margin-inline: auto;
+    border: none;
+}
+
+.social-icons {
+    height: 100px;
+    margin-inline: auto;
+    padding: 10px;
+    border: none;
+}
+  
+.social-icons ul {
+    list-style: none;
+    text-align: center;
+}
+  
+.social-icons ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+  
+.social-icons ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    color: #fff;
+    border: 1px solid rgb(255 255 255 / 0.15);
+    border-radius: 10px;
+}
+    
+.fa-brands:hover  {
+    color: #3A6870;
+    transition: background-color 0.25s ease-in-out;
+}
+  
+p.copyright {
+    font-size: 14px;
+    color:  #adadad;
+    opacity: 0.4;
+    font-weight: 400; 
+    text-align: center;
+    margin-top: 15px;
+}
+

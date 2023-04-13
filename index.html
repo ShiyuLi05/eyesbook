@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Shiyu Li">
+        <meta name="description" content="EyesBook">
+        <meta name="keywords" content="HTML, CSS, SEO, web, web development">
+        <title>eyesbook</title>
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;800&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!--CSS, Favicon, Script-->
+        <link rel="stylesheet" href="./src/style/index.css" media="all">
+        <link rel="shortcut icon" href="./src/img/icon.png" type="image/x-icon">
+        <script src="./src/script/index.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <div class="container">
+                <div class="login-page">
+                    <div class="login-image">
+                        
+                    </div>
+                    <div class="login-form">
+                        <h2>Welcom !</h2>
+                        <div class="title">Email</div>
+                        <input type="text" class="email" required>
+                        <div class="title">Password</div>
+                        <input type="password" class="password" required>
+                        <p class="password-reset"><a href="#">Forgot password?</a></p>
+
+                        <input type="button" id="login" name="Login" value="Login">
+                        <input type="button" id="signup" name="Signup" value="Signup">
+                        <div class="message"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+      
+            window.addEventListener('resize', () => {
+                vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            });
+        </script>
+    </body>
+    
+</html>
